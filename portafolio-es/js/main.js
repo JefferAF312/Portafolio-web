@@ -25,14 +25,16 @@ $('document').ready(function(){
 
     var boton = document.getElementById('boton');
         
-    $('#tagline').t({
-        beep:false,
-        caret:'<span style="color:hotpink;">•</span>',
-        typing:function(elm,chr){
-        if(chr.match(/\-trigger/))
+$('#tagline').t({
+    beep: false,
+    caret: '<span style="color:hotpink;">•</span>',
+    speed: 20, // velocidad en ms por carácter (más bajo = más rápido)
+    typing: function(elm, chr) {
+        if (chr.match(/\-trigger/))
             $('#pow-txt').show().delay(500).fadeOut(0);
-        }
-    });
+    }
+});
+
 
     $('#boton-arriba').click(function(){
         $('body, html').animate({

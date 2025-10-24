@@ -240,6 +240,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: grey;
   font-weight: 100;
   line-height: 1.5;
+   font-size: 1.5rem;
 }
 .main .sobre-mi .contenedor-sobre-mi .texto p {
   width: 90%;
@@ -249,18 +250,14 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 3rem 0;
   margin-bottom: 3rem;
 }
-.main .proyectos .contenedor-proyectos {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-}
-.main .proyectos .contenedor-proyectos .proyecto {
+.main .proyectos .contenedor-proyectos .proyecto,
+.main .projects .contenedor-proyectos .project {
   margin: auto;
-  width: 250px;
-  height: 350px;
+  width: 320px;      /* tamaño medio */
+  max-width: 90%;    /* responsivo */
+  height: auto;
 }
+
 .main .proyectos .contenedor-proyectos .proyecto .info {
   padding: 1rem 0.5rem;
   height: 10.625rem;
@@ -545,5 +542,43 @@ h1, h2, h3, h4, h5, h6, p {
 .main .proyectos .contenedor-proyectos .proyecto .foto a img:hover {
   filter: grayscale(100);
 }
+
+.contenedor-certificados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.tarjeta-certificado {
+  background: #262626;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-certificado:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-certificado img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.proyecto .foto img {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.proyecto .foto img:hover {
+  transform: scale(1.05);
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
