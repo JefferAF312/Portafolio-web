@@ -250,8 +250,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 3rem 0;
   margin-bottom: 3rem;
 }
-.main .proyectos .contenedor-proyectos .proyecto,
-.main .projects .contenedor-proyectos .project {
+.main .proyectos .contenedor-proyectos .proyecto{
   margin: auto;
   width: 320px;      /* tamaño medio */
   max-width: 90%;    /* responsivo */
@@ -260,7 +259,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .main .proyectos .contenedor-proyectos .proyecto .info {
   padding: 1rem 0.5rem;
-  height: 10.625rem;
+  height: 12.625rem;
   background: #ffffff;
   color: #000000;
   border: 0.125rem solid #969a97;
