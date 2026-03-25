@@ -235,7 +235,7 @@ const translations = {
       github: 'GitHub'
     },
     footer: {
-      copy: 'Portafolio disponible en espanol e ingles.'
+      copy: '2026 portafolio por Jefferson Antelo Flores'
     }
   },
   en: {
@@ -474,7 +474,7 @@ const translations = {
       github: 'GitHub'
     },
     footer: {
-      copy: 'Portfolio available in Spanish and English.'
+      copy: '2026 portafolio por Jefferson Antelo Flores'
     }
   }
 };
@@ -542,7 +542,6 @@ const elements = {
   altNodes: document.querySelectorAll('[data-i18n-alt]'),
   certificatesGrid: document.getElementById('certificatesGrid'),
   clickFxLayer: document.getElementById('clickFxLayer'),
-  currentYear: document.getElementById('currentYear'),
   descriptionMeta: document.querySelector('meta[name="description"]'),
   heroName: document.querySelector('.hero-name'),
   heroTyped: document.getElementById('heroTyped'),
@@ -577,7 +576,6 @@ document.addEventListener('DOMContentLoaded', () => {
   bindResponsiveEffects();
   bindScrollTop();
   applyTheme(getInitialTheme());
-  elements.currentYear.textContent = String(new Date().getFullYear());
   setLanguage(getInitialLanguage());
 
   if (window.location.hash && window.location.hash !== '#hero') {
