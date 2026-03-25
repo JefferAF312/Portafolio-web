@@ -3192,6 +3192,7 @@ html[data-theme="dark"] .theme-toggle[data-theme-selection="dark"] {
   }
 
   .hero {
+    width: min(var(--container), calc(100% - 0.8rem));
     min-height: auto;
     padding: 1.2rem 0 3rem;
   }
@@ -3206,8 +3207,9 @@ html[data-theme="dark"] .theme-toggle[data-theme-selection="dark"] {
   }
 
   .hero-name {
-    font-size: clamp(2rem, 11vw, 3.3rem);
-    line-height: 0.96;
+    font-size: clamp(1.42rem, 7.4vw, 2.32rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
   }
 
   .hero-name .name-glyph {
