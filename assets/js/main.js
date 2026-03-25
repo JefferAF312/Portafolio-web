@@ -760,6 +760,8 @@ function bindResponsiveEffects() {
 
   const handleChange = () => {
     syncResponsiveEffects();
+    startHeroNameAnimation(translations[currentLanguage].hero.name);
+    startHeroTyping(translations[currentLanguage].hero.introLines);
     scheduleFloatingNavRefresh(true);
     scheduleSkillsCarouselLayout(true);
   };
