@@ -3199,6 +3199,8 @@ html[data-theme="dark"] .theme-toggle[data-theme-selection="dark"] {
   }
 
   .hero-copy {
+    display: grid;
+    justify-items: center;
     width: min(100%, 24rem);
     padding: 0.85rem 0.3rem 1rem;
   }
@@ -3214,13 +3216,17 @@ html[data-theme="dark"] .theme-toggle[data-theme-selection="dark"] {
 
   .hero-name {
     display: block;
-    max-width: 12.5ch;
-    margin-inline: auto;
-    font-size: clamp(1.34rem, 8.1vw, 2.05rem);
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    text-align: center;
+    font-size: clamp(1.2rem, 7.6vw, 1.9rem);
     line-height: 0.98;
     letter-spacing: 0;
     white-space: normal;
-    text-wrap: balance;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-wrap: pretty;
   }
 
   .hero-name .name-char {
