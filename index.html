@@ -1,251 +1,192 @@
 <!DOCTYPE html>
-<html class="no-js">
-
-<head lang="es">
+<html lang="es">
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Portafolio online de un desarrollador web. Desarrollador front-end Jefferson Antelo Flores, creador de sitios webs atractivos, dinámicos e intuitivos.">
-  <meta name="keywords" content="desarrollador web, diseñador, desarrollador front-end">
+  <meta name="description" content="Portafolio de Jefferson Antelo Flores con experiencia en Java, Spring Boot, Angular, React, Node.js y C#, enfocado en productos web claros y bien estructurados.">
+  <meta name="keywords" content="portafolio, desarrollador web, front-end, ingeniero en sistemas, responsive, javascript">
   <meta name="author" content="Jefferson Antelo Flores">
-
-  <title>Portafolio - Jefferson Antelo Flores</title>
-
-  <link rel="shortcut icon" href="portafolio-es/img/icons/app-red-small.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portafolio-es/css/lightbox.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="portafolio-es/css/style.css">
+  <meta name="theme-color" content="#101828">
+  <title>Portafolio | Jefferson Antelo Flores</title>
+  <link rel="shortcut icon" href="assets/img/icons/app-red-small.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&family=Urbanist:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <nav class="menu">
-    <div class="foto">
-      <p><img src="portafolio-es/img/foto.jpg" alt="Jefferson Antelo Flores" class="foto"></p>
-    </div>
-    <div class="contenedor contenedor-menu">
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#conocimientos">Habilidades</a>
-      <a href="#certificados">Certificados</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-    <div class="idiomas">
-      <div class="esp idioma">
-        <a href="portafolio-es/index.html">
-          <img src="portafolio-es/img/español.png" class="bandera active" alt="Español" title="Español">
-        </a>
-      </div>
-      <div class="eng idioma">
-        <a href="portafolio-en/index.html">
-          <img src="portafolio-es/img/english.png" class="bandera" alt="English" title="Inglés">
-        </a>
-      </div>
-    </div>    
-  </nav>
+  <a class="skip-link" href="#contenido" data-i18n="access.skip">Saltar al contenido principal</a>
+  <div class="page-stars" aria-hidden="true">
+    <span class="page-stars-glow" id="pageStarsGlow"></span>
+  </div>
+  <div class="click-fx-layer" id="clickFxLayer" aria-hidden="true"></div>
+  <div class="theme-transition" id="themeTransition" aria-hidden="true"></div>
 
-  <header class="header">
-    <div class="contenedor contenedor-header">
-      <div class="nombre">
-        <span class="fade-in">Jefferson Antelo Flores</span>
+  <header class="topbar" id="hero">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="Jefferson Antelo Flores">
+        <img class="brand-avatar" src="assets/img/foto.jpg" alt="Jefferson Antelo Flores">
+        <span class="brand-copy">
+          <span class="brand-name">Jefferson Antelo Flores</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about" data-i18n="nav.about">Sobre mi</a>
+        <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="#certificates" data-i18n="nav.certificates">Certificados</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
       </div>
-      <h2 class="profesion">Desarrollador Web Front-End</h2>
+
+      <div class="nav-actions">
+        <div class="language-switcher" aria-label="Cambiar idioma">
+          <a class="language-link is-active" href="?lang=es" data-set-lang="es" hreflang="es">
+            <img src="assets/img/flags/es.png" alt="" aria-hidden="true">
+            <span class="sr-only">Espanol</span>
+          </a>
+          <a class="language-link" href="?lang=en" data-set-lang="en" hreflang="en">
+            <img src="assets/img/flags/en.png" alt="" aria-hidden="true">
+            <span class="sr-only">English</span>
+          </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo oscuro">
+          <span class="theme-toggle-icon" id="themeToggleIcon" aria-hidden="true">◐</span>
+          <span class="theme-toggle-text" id="themeToggleText">Modo oscuro</span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero container">
+      <div class="hero-copy">
+        <h1 class="hero-name" data-i18n="hero.name">Jefferson Antelo Flores</h1>
+        <p class="hero-role" data-i18n="hero.role">Ingeniero en Sistemas</p>
+        <div class="hero-console">
+          <p class="hero-console-label" data-i18n="hero.consoleLabel">Resumen rapido</p>
+          <p class="hero-typed" id="heroTyped" aria-live="polite"></p>
+        </div>
+        <p class="hero-text" data-i18n="hero.summary">Ingeniero en sistemas enfocado en construir interfaces funcionales, mantener proyectos ordenados y convertir ideas en productos web claros y utiles.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects" data-i18n="hero.primaryAction">Ver proyectos</a>
+          <a class="button button-secondary" href="#contact" data-i18n="hero.secondaryAction">Contacto</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="main">
-    <section class="sobre-mi">
-      <div class="contenedor contenedor-sobre-mi">
-        <h2 class="titulo" id="sobre-mi">Sobre mí</h2>
-        <div class="texto">
-          <p class="descripcion">
-            <span id="tagline">
-              Bienvenido: <br><br>
-              Soy <strong>Jefferson Antelo Flores</strong>, ingeniero en sistemas con formación completa y una pasión por crear soluciones tecnológicas
-              que realmente aporten valor. A lo largo de mi carrera he desarrollado diversos proyectos tanto web como de escritorio, lo que me ha permitido
-              fortalecer mis habilidades en programación, diseño de interfaces y arquitectura de software. <br><br>
-              Me especializo en el desarrollo de aplicaciones funcionales, eficientes y escalables, siempre buscando mejorar la experiencia del usuario y
-              optimizar los procesos detrás de cada sistema. Me gusta mantenerme actualizado con las últimas tecnologías y tendencias del sector, y disfruto
-              enfrentar nuevos desafíos que me permitan seguir creciendo como profesional <br><br>
-              Actualmente estoy enfocado en seguir ampliando mi portafolio, colaborar en proyectos innovadores y aportar con soluciones que marquen la diferencia.
+  <main id="contenido">
+    <section class="section section-light" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="sections.about.kicker">Perfil</p>
+          <h2 class="section-title" data-i18n="sections.about.title">Sobre mi</h2>
+          <p class="section-intro" data-i18n="sections.about.intro">Combino formacion tecnica, enfoque en producto y atencion al detalle para crear experiencias digitales solidas.</p>
+        </div>
+        <div class="about-card about-postcard" id="aboutPostcard">
+          <button class="about-postcard-toggle about-layout" id="aboutToggle" type="button" aria-expanded="false" aria-controls="aboutPanel">
+            <span class="about-photo-card">
+              <img class="about-photo" src="assets/img/foto.jpg" alt="Retrato de Jefferson Antelo Flores" data-i18n-alt="about.photoAlt">
             </span>
-          </p>
+            <span class="about-postcard-copy">
+              <span class="about-postcard-title" data-i18n="sections.about.title">Sobre mi</span>
+              <span class="about-postcard-role" data-i18n="hero.role">Ingeniero en Sistemas</span>
+              <span class="about-postcard-hint" id="aboutToggleText">Hazme click</span>
+            </span>
+            <span class="about-postcard-seal" aria-hidden="true"></span>
+          </button>
+          <div class="about-postcard-panel" id="aboutPanel" role="region" aria-labelledby="aboutToggle" aria-hidden="true">
+            <div class="about-stack" id="aboutContent"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="conocimientos">
-        <h2 class="titulo" id="conocimientos">Habilidades tecnológicas</h2>
-        <div class="contenedor">
-            <div class="contenedor-conocimientos">
-                <div class="tarjeta">
-                    <input type="checkbox" name="">
-                    <div class="cambio red">+</div>
-                    <div class="img">
-                        <img src="portafolio-es/img/habilidades/html.jpg" alt="">
-                    </div>
-                    <div class="detalles">
-                        <h3>HTML 5</h3>
-                        <p>
-                            Sus siglas vienen del inglés 'HyperText Markup Language'. Traducido al español 
-                            quiere decir 'Lenguaje de Marcado e HiperTexto'. Este lenguaje de marcado nos 
-                            permite crear la estructura (o cuerpo) básica de un sitio web mediante tags 
-                            (etiquetas). El número cinco (5) hace referencia a la versión en la que se 
-                            encuentra actualmente. Todos los títulos, párrafos, formularios, videos, entre 
-                            muchísimas cosas más, las tenemos gracias a este maravilloso lenguaje.
-                        </p>
-                    </div>
-                </div>
+    <section class="section section-white" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="sections.skills.kicker">Stack</p>
+          <h2 class="section-title" id="skillsTitle" data-i18n="sections.skills.title">Habilidades tecnologicas</h2>
+          <p class="section-intro" data-i18n="sections.skills.intro">Tecnologias principales con las que construyo soluciones claras, mantenibles y bien estructuradas.</p>
+        </div>
+        <div class="skills-carousel-shell">
+          <div class="skills-carousel" id="skillsCarousel" role="region" aria-labelledby="skillsTitle">
+            <div class="grid skills-grid" id="skillsGrid"></div>
+          </div>
+        </div>
+        <div class="skills-meta">
+          <p class="skills-meta-title" data-i18n="sections.skills.metaTitle">Bases de datos, herramientas y otros</p>
+          <div class="skills-meta-grid" id="skillsMetaGrid"></div>
+        </div>
+      </div>
+    </section>
 
-                <div class="tarjeta">
-                    <input type="checkbox" name="">
-                    <div class="cambio black">+</div>
-                    <div class="img">
-                        <img src="portafolio-es/img/habilidades/css.jpg" alt="">
-                    </div>
-                    <div class="detalles">
-                        <h3>CSS 3</h3>
-                        <p>
-                            CSS es un lenguaje de estilo. Sus siglas también tienen un significado 
-                            'Cascading StyleSheet', su traducción es 'Hojas de estilo de cascada'. 
-                            El número tres (3) hace referencia a la versión actual de dicho lenguaje. 
-                            También nos permite darle estilos al cuerpo de nuestros sitios web. Es 
-                            considerado como el maquillaje de HTML. Todo el diseño de un sitio va 
-                            directamente relacionado con este lenguaje.
-                        </p>
-                    </div>
-                </div>
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <div class="section-heading section-heading-dark">
+          <p class="section-kicker section-kicker-dark" data-i18n="sections.projects.kicker">Trabajo</p>
+          <h2 class="section-title" data-i18n="sections.projects.title">Proyectos destacados</h2>
+          <p class="section-intro section-intro-dark" data-i18n="sections.projects.intro">Una seleccion breve de trabajos donde priorice claridad visual, estructura limpia y buena adaptacion en distintos dispositivos.</p>
+        </div>
+        <div class="grid projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
 
-                <div class="tarjeta">
-                    <input type="checkbox" name="">
-                    <div class="cambio red">+</div>
-                    <div class="img">
-                        <img src="portafolio-es/img/habilidades/js.jpg" alt="">
-                    </div>
-                    <div class="detalles">
-                        <h3>JavaScript</h3>
-                        <p>
-                            JavaScript es un lenguaje de programación que nos permite añadir, 
-                            eliminar, aplicar animaciones o efectos a los componentes de nuestro sitio. 
-                            Es la herramienta perfecta para realizar sitios web dinámicos y muy 
-                            atractivos de la mano de CSS y HTML. Con el paso del tiempo ha evolucionado 
-                            de manera exponencial y ahora mismo es absolutamente necesario conocerlo si 
-                            quieres ser desarrollador web.
-                        </p>
-                    </div>
-                </div>
+    <section class="section section-light" id="certificates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="sections.certificates.kicker">Formacion</p>
+          <h2 class="section-title" data-i18n="sections.certificates.title">Certificados</h2>
+          <p class="section-intro" data-i18n="sections.certificates.intro">Cursos y certificaciones que complementan mi trabajo tecnico y refuerzan mi aprendizaje continuo.</p>
+        </div>
+        <div class="grid certificates-grid" id="certificatesGrid"></div>
+      </div>
+    </section>
 
-                <div class="tarjeta">
-                    <input type="checkbox" name="">
-                    <div class="cambio red">+</div>
-                    <div class="img">
-                        <img src="portafolio-es/img/habilidades/bootstrap.jpg" alt="">
-                    </div>
-                    <div class="detalles">
-                        <h3>Bootstrap</h3>
-                        <p>
-                            Es una de las estructuras de trabajo más usados en el mundo. Este framework
-                            hace mucho más sencillo el diseño y posicionamiento de los elementos con CSS.
-                            Te ahorras mucho tiempo gracias a que por defecto él trae las herramientas o 
-                            código interno para que tú no tengas que escribir nada más que clases 
-                            específicas que tiene predefinidas. Con una de estas clases de bootstrap te 
-                            podrías ahorrar cinco o más lineas de código en CSS.
-                        </p>
-                    </div>
-                </div>
+    <section class="section section-white" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="sections.contact.kicker">Contacto</p>
+          <h2 class="section-title" data-i18n="sections.contact.title">Construyamos algo util</h2>
+          <p class="section-intro" data-i18n="sections.contact.intro">Estoy disponible para colaborar en proyectos web, mejoras de interfaces y nuevas ideas digitales.</p>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-text" data-i18n="contact.text">Si quieres conversar sobre una oportunidad, una colaboracion o una mejora para tu producto, sera un gusto hablar contigo.</p>
+          <div class="contact-direct">
+            <div class="contact-mail-row">
+              <span class="contact-label" data-i18n="contact.emailLabel">Correo:</span>
+              <a class="contact-mail" href="mailto:Antelo123@hotmail.com">Antelo123@hotmail.com</a>
             </div>
-        </div>
-    </div>
+            <a class="contact-phone" href="tel:+59171611000" data-i18n="contact.phone">Celular: +591 71611000</a>
+          </div>
 
-    <section class="proyectos">
-  <h2 class="titulo" id="proyectos">Algunos proyectos realizados</h2>
-  <div class="contenedor contenedor-proyectos">
-    <div class="proyecto">
-      <div class="foto">
-        <a href="https://github.com/JefferAF312/pagina-web-go" target="_blank">
-          <img src="portafolio-es/img/proyectos/RosterGo.png" alt="Proyecto RosterGo">
-        </a>
-      </div>
-      <div class="info">
-        <h4>RosterGo</h4>
-        <div class="tech">
-          <h5>Tecnologías utilizadas:</h5>
-          <p>
-            <span class="html">HTML 5</span> - 
-            <span class="css">CSS 3</span> - 
-            <span class="javascript">JavaScript</span> - 
-            <span class="bootstrap">Bootstrap</span>
-          </p>
-        </div>
-        <p style="text-align:center; font-size: 0.95rem; line-height: 1.5;">
-         Utiliza Bootstrap para lograr un diseño responsivo y profesional.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-    
-    
-
-    <section class="certificados">
-      <h2 class="titulo" id="certificados">Certificados obtenidos</h2>
-      <div class="contenedor contenedor-certificados">
-        <div class="tarjeta-certificado">
-          <a href="portafolio-es/img/certificados/C_InteligenciaArtificial.jpg" data-lightbox="certificados" data-title="Inteligencia Artificial">
-            <img src="portafolio-es/img/certificados/C_InteligenciaArtificial.jpg" alt="Certificado Inteligencia Artificial">
-          </a>
-        </div>
-        <div class="tarjeta-certificado">
-          <a href="portafolio-es/img/certificados/C_TendenciasTecnologicas.jpg" data-lightbox="certificados" data-title="Tendencias Tecnológicas">
-            <img src="portafolio-es/img/certificados/C_TendenciasTecnologicas.jpg" alt="Certificado Tendencias Tecnológicas">
-          </a>
-        </div>
-        <div class="tarjeta-certificado">
-          <a href="portafolio-es/img/certificados/C_Observabilidad.jpg" data-lightbox="certificados" data-title="Observabilidad">
-            <img src="portafolio-es/img/certificados/C_Observabilidad.jpg" alt="Certificado Observabilidad">
-          </a>
-        </div>
-        <div class="tarjeta-certificado">
-          <a href="portafolio-es/img/certificados/C_Computacion.jpg" data-lightbox="certificados" data-title="Computación">
-            <img src="portafolio-es/img/certificados/C_Computacion.jpg" alt="Certificado Computación">
-          </a>
-        </div>
-        <div class="tarjeta-certificado">
-          <a href="portafolio-es/img/certificados/C_Ingles.jpg" data-lightbox="certificados" data-title="Inglés">
-            <img src="portafolio-es/img/certificados/C_Ingles.jpg" alt="Certificado Inglés">
-          </a>
+          <div class="social-links">
+            <a class="social-link" href="https://www.linkedin.com/in/jefferson-antelo-flores-667737290/" target="_blank" rel="noopener noreferrer">
+              <span class="social-label" data-i18n="contact.linkedin">LinkedIn</span>
+            </a>
+            <a class="social-link" href="https://github.com/JefferAF312" target="_blank" rel="noopener noreferrer">
+              <span class="social-label" data-i18n="contact.github">GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    
-    
   </main>
 
   <footer class="footer">
-    <div class="contenedor">
-      <div class="redes-sociales" id="contacto">
-        <a href="https://www.linkedin.com" target="_blank" class="social linkedin" title="Linkedin"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/JeffersonAntelo" target="_blank" class="social github" title="GitHub"><i
-            class="fab fa-github"></i></a>
-      </div>
+    <div class="container footer-content">
+      <p class="footer-copy">
+        <span>&copy; </span>
+        <span id="currentYear"></span>
+        <span data-i18n="footer.copy">Portafolio disponible en espanol e ingles.</span>
+      </p>
     </div>
-    <p class="autor">Jefferson Antelo Flores - 2025</p>
-    <p class="autor">Correo: Antelo123@hotmail.com</p>
-    <span><i class="boton-arriba fa fa-chevron-up" id="boton-arriba" aria-hidden="true"></i></span>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="portafolio-es/js/main.js"></script>
-  <script src="portafolio-es/js/lightbox-plus-jquery.min.js"></script>
-  <script src="portafolio-es/js/t.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
-</body>
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Volver arriba">
+    <span aria-hidden="true">&#8593;</span>
+  </button>
 
+  <script defer src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,69 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="56" fill="#0D1727"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <circle cx="316" cy="246" r="220" fill="url(#orb1)" opacity="0.9"/>
+  <circle cx="1264" cy="760" r="268" fill="url(#orb2)" opacity="0.85"/>
+  <circle cx="1202" cy="216" r="168" fill="url(#orb3)" opacity="0.78"/>
+  <g opacity="0.2">
+    <path d="M-40 856C188 724 398 662 618 666C856 670 1038 786 1252 788C1397 790 1510 744 1648 654" stroke="white" stroke-width="2"/>
+    <path d="M-76 910C198 746 418 694 666 700C884 706 1056 812 1268 818C1422 822 1524 776 1672 682" stroke="white" stroke-width="2"/>
+    <path d="M-24 784C188 670 384 620 602 622C822 624 1030 714 1246 718C1386 720 1492 686 1618 610" stroke="white" stroke-width="2"/>
+  </g>
+  <g opacity="0.12">
+    <rect x="112" y="104" width="1376" height="792" rx="36" stroke="white" stroke-width="2"/>
+    <rect x="148" y="140" width="1304" height="720" rx="28" stroke="white" stroke-width="2"/>
+  </g>
+  <rect x="176" y="180" width="236" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="294" y="214" fill="#E6EEF9" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="3">LANDING PAGE</text>
+  <text x="176" y="420" fill="#F7FAFC" font-family="'Space Grotesk', Arial, sans-serif" font-size="118" font-weight="700">blumcode.com</text>
+  <text x="176" y="492" fill="#C3D2E8" font-family="'Source Sans 3', Arial, sans-serif" font-size="40" font-weight="600">Landing page clara, moderna y profesional para presentar servicios.</text>
+  <g opacity="0.95">
+    <rect x="176" y="590" width="260" height="72" rx="36" fill="url(#pill1)"/>
+    <rect x="458" y="590" width="250" height="72" rx="36" fill="url(#pill2)"/>
+    <rect x="730" y="590" width="332" height="72" rx="36" fill="url(#pill3)"/>
+    <text x="306" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Responsive</text>
+    <text x="583" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Branding</text>
+    <text x="896" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Servicios</text>
+  </g>
+  <rect x="1116" y="282" width="274" height="350" rx="34" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="1150" y="320" width="208" height="122" rx="26" fill="url(#card)"/>
+  <rect x="1150" y="474" width="164" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.16"/>
+  <rect x="1150" y="510" width="188" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.12"/>
+  <rect x="1150" y="566" width="122" height="42" rx="21" fill="#FF845C" fill-opacity="0.92"/>
+  <text x="1240" y="394" fill="#F7FAFC" font-family="'Space Grotesk', Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">BC</text>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="110" x2="1416" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.54" stop-color="#14243A"/>
+      <stop offset="1" stop-color="#0E1A2C"/>
+    </linearGradient>
+    <radialGradient id="orb1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(316 246) rotate(90) scale(220)">
+      <stop stop-color="#FF8C66"/>
+      <stop offset="1" stop-color="#FF8C66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1264 760) rotate(90) scale(268)">
+      <stop stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1202 216) rotate(90) scale(168)">
+      <stop stop-color="#FFF2B8"/>
+      <stop offset="1" stop-color="#FFF2B8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pill1" x1="176" y1="590" x2="436" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF845C"/>
+      <stop offset="1" stop-color="#E85D3B"/>
+    </linearGradient>
+    <linearGradient id="pill2" x1="458" y1="590" x2="708" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B6EFF"/>
+      <stop offset="1" stop-color="#6AA8FF"/>
+    </linearGradient>
+    <linearGradient id="pill3" x1="730" y1="590" x2="1062" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2A40"/>
+      <stop offset="1" stop-color="#324B70"/>
+    </linearGradient>
+    <linearGradient id="card" x1="1150" y1="320" x2="1358" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF845C"/>
+      <stop offset="1" stop-color="#4DA3FF"/>
+    </linearGradient>
+  </defs>
+</svg>

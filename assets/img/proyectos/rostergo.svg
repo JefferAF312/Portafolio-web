@@ -1,0 +1,76 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" rx="56" fill="#0D1727"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <circle cx="278" cy="228" r="230" fill="url(#orb1)" opacity="0.9"/>
+  <circle cx="1310" cy="736" r="280" fill="url(#orb2)" opacity="0.88"/>
+  <circle cx="1194" cy="196" r="164" fill="url(#orb3)" opacity="0.76"/>
+  <g opacity="0.2">
+    <path d="M-34 860C158 738 372 654 610 660C828 666 1040 760 1260 762C1392 764 1510 720 1644 626" stroke="white" stroke-width="2"/>
+    <path d="M-70 922C172 772 400 688 656 694C872 700 1066 792 1276 794C1422 796 1534 750 1666 654" stroke="white" stroke-width="2"/>
+    <path d="M-24 788C168 676 374 614 598 616C816 618 1028 700 1248 704C1398 706 1502 678 1624 596" stroke="white" stroke-width="2"/>
+  </g>
+  <g opacity="0.12">
+    <rect x="112" y="104" width="1376" height="792" rx="36" stroke="white" stroke-width="2"/>
+    <rect x="148" y="140" width="1304" height="720" rx="28" stroke="white" stroke-width="2"/>
+  </g>
+  <rect x="176" y="180" width="280" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="316" y="214" fill="#E6EEF9" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="3">WEB SERVICE</text>
+  <text x="176" y="414" fill="#F7FAFC" font-family="'Space Grotesk', Arial, sans-serif" font-size="118" font-weight="700">RosterGo</text>
+  <text x="176" y="486" fill="#C3D2E8" font-family="'Source Sans 3', Arial, sans-serif" font-size="40" font-weight="600">Servicio web para restaurante con enfoque en pedidos y delivery.</text>
+  <g opacity="0.95">
+    <rect x="176" y="590" width="250" height="72" rx="36" fill="url(#pill1)"/>
+    <rect x="448" y="590" width="226" height="72" rx="36" fill="url(#pill2)"/>
+    <rect x="696" y="590" width="264" height="72" rx="36" fill="url(#pill3)"/>
+    <text x="301" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Pedidos</text>
+    <text x="561" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Delivery</text>
+    <text x="828" y="636" fill="white" font-family="'Space Grotesk', Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Restaurante</text>
+  </g>
+  <rect x="1088" y="250" width="316" height="414" rx="36" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="1118" y="282" width="256" height="72" rx="24" fill="#FFFFFF" fill-opacity="0.12"/>
+  <circle cx="1160" cy="318" r="10" fill="#FF845C"/>
+  <circle cx="1192" cy="318" r="10" fill="#6AA8FF"/>
+  <circle cx="1224" cy="318" r="10" fill="#FFF2B8"/>
+  <rect x="1118" y="386" width="256" height="166" rx="28" fill="url(#card)"/>
+  <rect x="1150" y="420" width="118" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.94"/>
+  <rect x="1150" y="454" width="164" height="16" rx="8" fill="#FFFFFF" fill-opacity="0.62"/>
+  <rect x="1150" y="512" width="192" height="16" rx="8" fill="#FFFFFF" fill-opacity="0.18"/>
+  <rect x="1150" y="544" width="168" height="16" rx="8" fill="#FFFFFF" fill-opacity="0.14"/>
+  <rect x="1150" y="588" width="126" height="42" rx="21" fill="#FF845C" fill-opacity="0.94"/>
+  <text x="1246" y="438" fill="#F7FAFC" font-family="'Space Grotesk', Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Delivery flow</text>
+  <text x="1212" y="615" fill="#FFFFFF" font-family="'Space Grotesk', Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Order now</text>
+  <defs>
+    <linearGradient id="bg" x1="136" y1="96" x2="1422" y2="918" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.54" stop-color="#13243A"/>
+      <stop offset="1" stop-color="#0D1B2F"/>
+    </linearGradient>
+    <radialGradient id="orb1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(278 228) rotate(90) scale(230)">
+      <stop stop-color="#FF8C66"/>
+      <stop offset="1" stop-color="#FF8C66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1310 736) rotate(90) scale(280)">
+      <stop stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1194 196) rotate(90) scale(164)">
+      <stop stop-color="#FFF2B8"/>
+      <stop offset="1" stop-color="#FFF2B8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pill1" x1="176" y1="590" x2="426" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF845C"/>
+      <stop offset="1" stop-color="#E85D3B"/>
+    </linearGradient>
+    <linearGradient id="pill2" x1="448" y1="590" x2="674" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B6EFF"/>
+      <stop offset="1" stop-color="#6AA8FF"/>
+    </linearGradient>
+    <linearGradient id="pill3" x1="696" y1="590" x2="960" y2="662" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2A40"/>
+      <stop offset="1" stop-color="#324B70"/>
+    </linearGradient>
+    <linearGradient id="card" x1="1118" y1="386" x2="1374" y2="552" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF845C"/>
+      <stop offset="1" stop-color="#4DA3FF"/>
+    </linearGradient>
+  </defs>
+</svg>
