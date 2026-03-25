@@ -482,6 +482,8 @@ const translations = {
 const validLanguages = Object.keys(translations);
 const validThemes = ['system', 'dark', 'light'];
 const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const compactViewportQuery = window.matchMedia('(max-width: 47.99rem)');
 const legacyHashes = {
   '#sobre-mi': '#about',
   '#conocimientos': '#skills',
@@ -567,14 +569,25 @@ document.addEventListener('DOMContentLoaded', () => {
   bindAboutPostcard();
   bindClickEffects();
   bindLanguageSwitcher();
+  bindSectionNavigation();
   bindStarFieldGlow();
   bindThemeToggle();
   bindFloatingNav();
   bindSkillsCarousel();
+  bindResponsiveEffects();
   bindScrollTop();
   applyTheme(getInitialTheme());
   elements.currentYear.textContent = String(new Date().getFullYear());
   setLanguage(getInitialLanguage());
+
+  if (window.location.hash && window.location.hash !== '#hero') {
+    const initialSection = document.querySelector(window.location.hash);
+    if (initialSection) {
+      window.requestAnimationFrame(() => {
+        scrollToSection(initialSection, { updateHash: false, focusTarget: false });
+      });
+    }
+  }
 });
 
 function bindAboutPostcard() {
@@ -593,6 +606,29 @@ function bindLanguageSwitcher() {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       setLanguage(link.dataset.setLang);
+    });
+  });
+}
+
+function bindSectionNavigation() {
+  if (!elements.navLinks.length) {
+    return;
+  }
+
+  elements.navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const targetSelector = link.getAttribute('href');
+      if (!targetSelector || !targetSelector.startsWith('#')) {
+        return;
+      }
+
+      const section = document.querySelector(targetSelector);
+      if (!section) {
+        return;
+      }
+
+      event.preventDefault();
+      scrollToSection(section, { updateHash: true, focusTarget: true });
     });
   });
 }
@@ -634,6 +670,10 @@ function bindClickEffects() {
   document.addEventListener(
     'click',
     (event) => {
+      if (shouldReduceVisualEffects()) {
+        return;
+      }
+
       if (!(event.target instanceof Element)) {
         return;
       }
@@ -665,6 +705,11 @@ function bindStarFieldGlow() {
   };
 
   const handlePointerMove = (event) => {
+    if (shouldReduceVisualEffects()) {
+      hideGlow();
+      return;
+    }
+
     if (event.pointerType && event.pointerType !== 'mouse' && event.pointerType !== 'pen') {
       return;
     }
@@ -699,6 +744,35 @@ function bindStarFieldGlow() {
   );
 
   scheduleRender();
+}
+
+function bindResponsiveEffects() {
+  const syncResponsiveEffects = () => {
+    const reduceEffects = shouldReduceVisualEffects();
+    skillsCarouselState.baseSpeed = compactViewportQuery.matches ? 0 : 60;
+    setSkillsCarouselPause('mobile-autoscroll', compactViewportQuery.matches);
+
+    if (reduceEffects && elements.pageStarsGlow) {
+      starFieldState.visible = false;
+      elements.pageStarsGlow.classList.remove('is-visible');
+    }
+  };
+
+  syncResponsiveEffects();
+
+  const handleChange = () => {
+    syncResponsiveEffects();
+    scheduleFloatingNavRefresh(true);
+    scheduleSkillsCarouselLayout(true);
+  };
+
+  if (typeof compactViewportQuery.addEventListener === 'function') {
+    compactViewportQuery.addEventListener('change', handleChange);
+    reducedMotionQuery.addEventListener('change', handleChange);
+  } else if (typeof compactViewportQuery.addListener === 'function') {
+    compactViewportQuery.addListener(handleChange);
+    reducedMotionQuery.addListener(handleChange);
+  }
 }
 
 function bindScrollTop() {
@@ -859,6 +933,10 @@ function getInitialTheme() {
   return 'system';
 }
 
+function shouldReduceVisualEffects() {
+  return reducedMotionQuery.matches || compactViewportQuery.matches;
+}
+
 function getStoredLanguage() {
   try {
     return window.localStorage.getItem('portfolio-language');
@@ -1000,7 +1078,7 @@ function runThemeTransition(theme, dictionary = translations[currentLanguage]) {
   const nextTheme = isValidTheme(theme) ? theme : 'system';
   const nextResolvedTheme = getResolvedTheme(nextTheme);
 
-  if (!elements.themeTransition || nextResolvedTheme === currentResolvedTheme) {
+  if (!elements.themeTransition || nextResolvedTheme === currentResolvedTheme || shouldReduceVisualEffects()) {
     applyTheme(nextTheme, dictionary);
     return;
   }
@@ -1056,6 +1134,42 @@ function updateLanguageLinks(activeLanguage) {
       link.removeAttribute('aria-current');
     }
   });
+}
+
+function getSectionScrollOffset() {
+  const navHeight = elements.nav ? elements.nav.getBoundingClientRect().height : 0;
+  const rootStyles = window.getComputedStyle(document.documentElement);
+  const navOffset = Number.parseFloat(rootStyles.getPropertyValue('--nav-offset')) || 0;
+  return Math.ceil(navHeight + navOffset + 18);
+}
+
+function scrollToSection(section, options = {}) {
+  const { updateHash = false, focusTarget = false } = options;
+  const targetTop = Math.max(section.getBoundingClientRect().top + window.scrollY - getSectionScrollOffset(), 0);
+  const behavior = shouldReduceVisualEffects() ? 'auto' : 'smooth';
+
+  window.scrollTo({ top: targetTop, behavior });
+
+  if (focusTarget) {
+    if (!section.hasAttribute('tabindex')) {
+      section.setAttribute('tabindex', '-1');
+    }
+
+    const focusDelay = behavior === 'smooth' ? 380 : 0;
+    window.setTimeout(() => {
+      section.focus({ preventScroll: true });
+    }, focusDelay);
+  }
+
+  if (updateHash) {
+    try {
+      const url = new URL(window.location.href);
+      url.hash = `#${section.id}`;
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    } catch (error) {
+      return;
+    }
+  }
 }
 
 function updateLanguageUrl(language) {
@@ -1743,7 +1857,7 @@ function renderCertificates(certificates) {
 }
 
 function startHeroNameAnimation(finalText) {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersReducedMotion = shouldReduceVisualEffects();
 
   if (prefersReducedMotion) {
     elements.heroName.textContent = finalText;
@@ -1762,6 +1876,12 @@ function startHeroTyping(lines) {
   }
 
   const content = lines.map((line) => `> ${line}`).join('\n');
+
+  if (shouldReduceVisualEffects()) {
+    elements.heroTyped.textContent = content;
+    return;
+  }
+
   let index = 0;
 
   elements.heroTyped.textContent = '';

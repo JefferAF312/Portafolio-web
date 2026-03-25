@@ -326,7 +326,11 @@ select {
 }
 
 section {
-  scroll-margin-top: calc(var(--nav-height) + 1.15rem);
+  scroll-margin-top: calc(var(--nav-height) + var(--nav-offset) + 1.1rem);
+}
+
+section:focus {
+  outline: none;
 }
 
 .container {
@@ -3027,6 +3031,141 @@ html[data-theme="dark"] .theme-toggle[data-theme-selection="system"] {
 
 html[data-theme="dark"] .theme-toggle[data-theme-selection="dark"] {
   color: #cfe0ff;
+}
+
+@media (max-width: 47.99rem) {
+  :root {
+    --section-space: 3.4rem;
+    --nav-offset: 0.7rem;
+  }
+
+  .click-fx-layer,
+  .theme-transition,
+  .page-stars-glow {
+    display: none;
+  }
+
+  .page-stars::before,
+  .page-stars::after,
+  .topbar::before,
+  .hero-copy::before,
+  .hero-name::after,
+  .hero-console::before,
+  .hero-console::after,
+  .button::before,
+  .skills-carousel-shell::before,
+  .skills-carousel-shell::after {
+    content: none;
+    animation: none;
+  }
+
+  .page-stars::before,
+  .page-stars::after {
+    opacity: 0.24;
+  }
+
+  html[data-theme="dark"] .page-stars {
+    opacity: 0.54;
+  }
+
+  .nav,
+  .nav.is-condensed {
+    padding: 0.82rem 0.9rem;
+    backdrop-filter: blur(10px) saturate(118%);
+    box-shadow:
+      0 14px 28px rgba(15, 23, 42, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.62);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  .nav-links a,
+  .language-link,
+  .theme-toggle,
+  .button,
+  .skill-card,
+  .project-card,
+  .certificate-card,
+  .about-card {
+    transition: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 1.2rem 0 3rem;
+  }
+
+  .hero-name,
+  .hero-role,
+  .hero-console,
+  .hero-text,
+  .hero-actions {
+    animation: none;
+    opacity: 1;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 11vw, 3.3rem);
+    line-height: 0.96;
+  }
+
+  .hero-name .name-glyph {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .hero-name .dust-particle {
+    display: none;
+  }
+
+  .hero-console {
+    margin-top: 1.15rem;
+    padding: 0.95rem 0.95rem 1rem;
+    backdrop-filter: none;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+  }
+
+  .hero-typed {
+    min-height: auto;
+  }
+
+  .button:hover,
+  .button:focus-visible,
+  .about-card:hover,
+  .skill-card:hover,
+  .skill-card:focus-visible,
+  .skill-card:focus-within,
+  .project-card:hover,
+  .project-card:focus-visible,
+  .project-card:focus-within,
+  .certificate-card:hover,
+  .certificate-card:focus-within {
+    transform: none;
+  }
+
+  .project-card:hover .project-card-media,
+  .project-card:focus-visible .project-card-media,
+  .project-card:focus-within .project-card-media,
+  .project-card:hover .project-card-media img,
+  .project-card:focus-visible .project-card-media img,
+  .project-card:focus-within .project-card-media img,
+  .certificate-card:hover img,
+  .certificate-card:focus-within img,
+  .skill-card:hover .skill-card-media img,
+  .skill-card:focus-visible .skill-card-media img,
+  .skill-card:focus-within .skill-card-media img {
+    transform: none;
+    filter: none;
+  }
+
+  .skills-carousel {
+    scroll-snap-type: x proximity;
+  }
+
+  .skills-carousel.is-dragging {
+    scroll-snap-type: none;
+  }
 }
 
 @media (min-width: 48rem) {
